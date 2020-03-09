@@ -1,0 +1,17 @@
+version: '3'
+services:
+  user:
+    image: screamerd12/rugby_fyp_users_svc:1.0
+    command: node index.js
+    ports:
+      - "3000:3000"
+  games:
+    image: screamerd12/rugby_fyp_games_svc:1.0
+    command: node index.js
+    ports:
+      - "3001:3000"
+  sensors:
+    image: screamerd12/rugby_fyp_sensors_svc:1.0
+    command: node index.js
+    ports:
+      - "3002:3000"
